@@ -9,11 +9,18 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/HansPinckaers/GrowingTextView.git", :tag => s.version.to_s }
   s.platform     = :ios
 
+  s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
   s.requires_arc = true
   s.default_subspec = 'Core'
   
   s.subspec 'Core' do |ss|
     ss.source_files = 'Classes', 'class/**/*.{h,m}'
+  end
+
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/HPGrowingTextView.framework'
   end
   
 end
