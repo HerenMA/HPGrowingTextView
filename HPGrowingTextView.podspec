@@ -23,4 +23,6 @@ Pod::Spec.new do |s|
     ss.ios.vendored_framework   = 'ios/HPGrowingTextView.framework'
   end
   
+  s.frameworks = 'UIKit'
+  
 end
