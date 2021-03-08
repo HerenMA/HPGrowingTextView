@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/HansPinckaers/GrowingTextView"
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
   s.author       = { "Hans Pinckaers" => "hans.pinckaers@gmail.com" }
-  s.source       = { :git => "https://github.com/HerenMA/GrowingTextView.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/HerenMA/HPGrowingTextView.git", :tag => s.version.to_s }
   s.platform     = :ios
 
   s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
